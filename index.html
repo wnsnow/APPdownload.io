@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>TBEA Solar Tool - Official Download</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft Yahei", Arial, sans-serif;
+        }
+        body {
+            background-color: #f5f7fa;
+            padding: 20px;
+        }
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            padding: 40px 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+        .logo-area {
+            margin-bottom: 30px;
+        }
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            color: #0052d9; /* TBEA brand blue */
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            font-size: 16px;
+            color: #666;
+        }
+        .download-btn {
+            display: inline-block;
+            width: 80%;
+            padding: 16px 0;
+            background-color: #0052d9;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 500;
+            margin: 20px 0;
+            transition: background-color 0.3s;
+        }
+        .download-btn:hover {
+            background-color: #0047b3;
+        }
+        .tips {
+            font-size: 14px;
+            color: #999;
+            line-height: 1.6;
+            margin-top: 30px;
+        }
+        .loading {
+            display: none;
+            color: #0052d9;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-area">
+            <div class="logo">TBEA</div>
+            <div class="subtitle">Solar Tool</div>
+        </div>
+        
+        <a href="https://pub-a89e357f012142edb48c8697cb3c5d5e.r2.dev/tbea-release.apk" class="download-btn" id="downloadBtn">
+            Download 
+        </a>
+        <div class="loading" id="loadingTip">Preparing installation package, please wait...</div>
+        
+        <div class="tips">
+            <p>✓ Ensure "Install from unknown sources" is enabled before download</p>
+            <p>✓ Installation package size: Fill in actual file size here</p>
+            <p>✓ This download link is available worldwide, WiFi connection recommended</p>
+        </div>
+    </div>
+
+    <script>
+        // Show loading prompt when download button is clicked
+        const downloadBtn = document.getElementById('downloadBtn');
+        const loadingTip = document.getElementById('loadingTip');
+        
+        downloadBtn.addEventListener('click', function() {
+            loadingTip.style.display = 'block';
+            // Hide loading prompt after 5 seconds (avoid permanent display)
+            setTimeout(() => {
+                loadingTip.style.display = 'none';
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
